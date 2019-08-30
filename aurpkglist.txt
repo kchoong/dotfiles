@@ -1,0 +1,10 @@
+gotop
+intellij-idea-ultimate-edition
+nerd-fonts-complete
+openoffice
+phpstorm
+polybar
+pycharm-professional
+spotify
+webstorm
+yay

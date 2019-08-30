@@ -1,0 +1,4 @@
+rofi.combi-mode:	window,drun
+rofi.modi:		combi
+rofi.font: Inconsolata 14
+rofi.theme: ~/.config/rofi/aesthetics.rasi
