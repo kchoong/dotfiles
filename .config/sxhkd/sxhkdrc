@@ -120,6 +120,10 @@ super + alt + 3
 super + alt + 4
 	sh ~/.scripts/duplicate.sh
 
+# turn off screen
+super + minus
+	sh ~/.scripts/screentoggle.sh
+
 #
 # Fn-hotkeys
 #
