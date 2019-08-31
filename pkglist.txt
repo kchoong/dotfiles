@@ -1,6 +1,7 @@
 adobe-source-code-pro-fonts
 alsa-utils
 apache
+arandr
 atom
 autoconf
 automake
@@ -66,6 +67,7 @@ man-pages
 mariadb
 mdadm
 mercurial
+mongodb-bin
 nano
 neofetch
 nerd-fonts-complete
@@ -74,7 +76,6 @@ networkmanager
 nm-connection-editor
 noto-fonts-cjk
 nvidia
-openoffice
 openssh
 pacman
 patch

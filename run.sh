@@ -34,3 +34,7 @@ mv httpd etc
 # pacman
 pacman -Qqe > pkglist.txt
 pacman -Qqem > aurpkglist.txt
+
+# scripts
+rm -r .scripts
+cp -r ~/.scripts .
