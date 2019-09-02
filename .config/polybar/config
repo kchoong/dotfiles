@@ -28,7 +28,7 @@ alert = #fd1369
 
 [bar/top]
 width = 100%
-height = 26
+height = 32
 offset-x = 0
 offset-y = 0
 radius = 0.0
@@ -37,27 +37,27 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-underline-size = 2
-padding-left = 0
-padding-right = 2
+underline-size = 3
+padding-left = 5
+padding-right = 5
 
-font-0 = Inconsolata:style=Regular:size=12;3
-font-1 = Noto Sans CJK JP:style=Regular:size=12;3
-font-2 = Ubuntu Nerd Font:style=Regular:size=12;3
+font-0 = Noto Sans:style=Regular:size=12;3
+font-1 = Ubuntu Nerd Font:style=Regular:size=12;3
+font-2 = Noto Sans CJK JP:style=Regular:size=12;3
 
 modules-left = bspwm
 modules-center = xwindow
 modules-right = spotify volume wlan battery time
-module-margin-left = 2
-module-margin-right = 2
-separator = |
+module-margin-left = 3
+module-margin-right = 3
+;separator = |
 
 wm-restack bspwm
 
 [bar/top-external]
 monitor=HDMI-1
 width = 100%
-height = 26
+height = 32
 offset-x = 0
 offset-y = 0
 radius = 0.0
@@ -66,20 +66,20 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-underline-size = 2
-padding-left = 0
-padding-right = 2
+underline-size = 3
+padding-left = 5
+padding-right = 5
 
-font-0 = Inconsolata:style=Regular:size=12;3
-font-1 = Noto Sans CJK JP:style=Regular:size=12;3
-font-2 = Ubuntu Nerd Font:style=Regular:size=12;3
+font-0 = Noto Sans:style=Regular:size=12;3
+font-1 = Ubuntu Nerd Font:style=Regular:size=12;3
+font-2 = Noto Sans CJK JP:style=Regular:size=12;3
 
 modules-left = bspwm
 modules-center = xwindow
 modules-right = spotify volume wlan battery time
-module-margin-left = 2
-module-margin-right = 2
-separator = |
+module-margin-left = 3
+module-margin-right = 3
+;separator = |
 
 wm-restack bspwm
 
@@ -100,17 +100,17 @@ format = <label-state> <label-mode>
 
 label-focused = %name%
 label-focused-underline= ${colors.alert}
-label-focused-padding = 2
+label-focused-padding = 3
 
 label-occupied = %name%
-label-occupied-padding = 2
+label-occupied-padding = 3
 
 label-urgent = %name%
-label-urgent-padding = 2
+label-urgent-padding = 3
 
 label-empty =
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 3
 
 ; Separator in between workspaces
 ;label-separator = |
@@ -141,8 +141,8 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-charging = <animation-charging>  <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground}
@@ -179,12 +179,18 @@ label = %percentage_used%%
 [module/time]
 type = internal/date
 interval = 5
-date =  %H:%M
+date =   %H:%M %p
 
 [module/date]
 type = internal/date
 interval = 5
-date =  %e %B - %A
+date =  %a %d %b
+label = %date%
+
+[module/datetime]
+type = internal/date
+interval = 5
+date =  %a %d. %b, %H:%M
 label = %date%
 
 [module/volume]
@@ -216,5 +222,3 @@ compositing-foreground = source
 [global/wm]
 margin-top = 0
 margin-bottom = 0
-
-; vim:ft=dosini

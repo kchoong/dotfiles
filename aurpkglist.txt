@@ -1,3 +1,4 @@
+chrome-remote-desktop
 gotop
 intellij-idea-ultimate-edition
 mongodb-bin

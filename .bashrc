@@ -27,6 +27,9 @@ alias stop='sudo systemctl stop'
 alias restart='sudo systemctl restart'
 alias status='systemctl status'
 
+# fix backlight temp
+alias flight='sudo chmod 666 /sys/class/backlight/intel_backlight/brightness'
+
 # documents
 alias sync-drive='rclone sync -P drive: ~/Drive'
 alias pdf='chromium --new-window --incognito'
