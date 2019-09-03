@@ -38,10 +38,10 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 underline-size = 3
-padding-left = 5
-padding-right = 5
+padding-left = 6
+padding-right = 6
 
-font-0 = Noto Sans:style=Regular:size=12;3
+font-0 = SF Pro Display:style=Regular:size=12;3
 font-1 = Ubuntu Nerd Font:style=Regular:size=12;3
 font-2 = Noto Sans CJK JP:style=Regular:size=12;3
 
@@ -67,10 +67,10 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 underline-size = 3
-padding-left = 5
-padding-right = 5
+padding-left = 6
+padding-right = 6
 
-font-0 = Noto Sans:style=Regular:size=12;3
+font-0 = SF Pro Display:style=Regular:size=12;3
 font-1 = Ubuntu Nerd Font:style=Regular:size=12;3
 font-2 = Noto Sans CJK JP:style=Regular:size=12;3
 
@@ -100,17 +100,17 @@ format = <label-state> <label-mode>
 
 label-focused = %name%
 label-focused-underline= ${colors.alert}
-label-focused-padding = 3
+label-focused-padding = 5
 
 label-occupied = %name%
-label-occupied-padding = 3
+label-occupied-padding = 5
 
 label-urgent = %name%
-label-urgent-padding = 3
+label-urgent-padding = 5
 
 label-empty =
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 3
+label-empty-padding = 5
 
 ; Separator in between workspaces
 ;label-separator = |
@@ -210,7 +210,7 @@ type = custom/script
 interval = 1
 format-prefix = " "
 format = <label>
-exec = python ~/.config/polybar/spotify_status.py -f '{song} : {artist} {play_pause}' -p ','
+exec = python ~/.config/polybar/scripts/spotify_status.py -f '{song} : {artist} {play_pause}' -p ','
 
 [settings]
 screenchange-reload = true

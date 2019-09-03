@@ -1,0 +1,15 @@
+configuration {
+  show-icons:         false;
+  icon-theme:         "papirus-icon-theme";
+  cycle:              true;
+  hide-scrollbar:     true;
+  disable-history:    false;
+  columns:            1;
+  modi:               "window,drun,ssh,run,combi";
+  combi-modi:         "drun,run";
+  display-drun:       "Apps";
+  display-run:        "Run";
+  display-window:     "Window";
+  display-ssh:        "SSH";
+  display-combi:      "#";
+}

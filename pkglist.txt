@@ -25,6 +25,7 @@ dhcpcd
 dialog
 diffutils
 discord
+dmenu
 e2fsprogs
 efibootmgr
 fakeroot
@@ -78,7 +79,9 @@ nm-connection-editor
 noto-fonts-cjk
 nvidia
 openssh
+otf-san-francisco
 pacman
+papirus-icon-theme
 patch
 pciutils
 perl
@@ -90,8 +93,6 @@ phpmyadmin
 phpstorm
 pkgconf
 polybar
-powerline
-powerline-fonts
 procps-ng
 psmisc
 pulseaudio
@@ -102,10 +103,12 @@ python
 python-pip
 ranger
 rclone
+redshift
 reiserfsprogs
 rofi
 rxvt-unicode
 s-nail
+scrot
 sed
 shadow
 spotify

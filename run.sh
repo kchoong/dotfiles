@@ -16,6 +16,7 @@ rm -r .config/configstore
 rm -r .config/dconf
 rm -r .config/discord
 rm -r .config/gtk-3.0
+rm -r .config/menus
 rm -r .config/procps
 rm -r .config/rclone
 rm -r .config/spotify

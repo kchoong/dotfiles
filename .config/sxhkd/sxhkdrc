@@ -157,5 +157,21 @@ super + Return
 	urxvt
 
 # program launcher
-super + @space
-	rofi -show combi
+super + space
+	rofi -show drun -theme themes/appsmenu.rasi
+
+# program and run launcher
+super + alt + space
+	rofi -show combi -theme themes/appsmenu.rasi
+
+# window selector
+super + ctrl + space
+	rofi -show window -theme themes/appsmenu.rasi
+
+# screenshot menu
+Print
+	sh ~/.config/rofi/scripts/scrotmenu.sh
+
+# power menu
+super + o
+	sh ~/.config/rofi/scripts/powermenu.sh

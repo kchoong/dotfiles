@@ -3,40 +3,40 @@
 ! ----------------------------------------
 
 ! special
-*.foreground:   #dfdfdf
+*.foreground:   #ffffff
 *.background:   #000000
-*.cursorColor:  #dfdfdf
+*.cursorColor:  #ffffff
 
 ! black
-*.color0:       #1d1f21
-*.color8:       #969896
+*.color0:       #232627
+*.color8:       #232627
 
 ! red
-*.color1:       #cc342b
-*.color9:       #cc342b
+*.color1:       #ff4a3d
+*.color9:       #ff4a3d
 
 ! green
-*.color2:       #198844
-*.color10:      #198844
+*.color2:       #46ea6c
+*.color10:      #46ea6c
 
 ! yellow
-*.color3:       #fba922
-*.color11:      #fba922
+*.color3:       #fff83d
+*.color11:      #fff83d
 
 ! blue
-*.color4:       #3971ed
-*.color12:      #3971ed
+*.color4:       #00b2ff
+*.color12:      #00b2ff
 
 ! magenta
-*.color5:       #a36ac7
-*.color13:      #a36ac7
+*.color5:       #d753e2
+*.color13:      #d753e2
 
 ! cyan
-*.color6:       #3971ed
-*.color14:      #3971ed
+*.color6:       #46dcea
+*.color14:      #46dcea
 
 ! white
-*.color7:       #c5c8c6
+*.color7:       #ffffff
 *.color15:      #ffffff
 
 ! ----------------------------------------
@@ -53,7 +53,7 @@ Xft.lcdfilter: lcddefault
 URxvt.scrollBar: false
 URxvt.internalBorder:  5
 URxvt.lineSpace: 4
-URxvt*font: xft:Source Code Pro Medium:size=12
+URxvt*font: xft:Source Code Pro:size=12
 
 URxvt.perl-ext: default
 URxvt.perl-ext-common: default, clipboard
