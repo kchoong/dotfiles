@@ -22,7 +22,7 @@ alias restart='sudo systemctl restart'
 alias status='systemctl status'
 
 # fix backlight temp
-alias flight='sudo chmod 666 /sys/class/backlight/intel_backlight/brightness'
+alias fix-light='sudo chmod 666 /sys/class/backlight/intel_backlight/brightness'
 
 # documents
 alias sync-drive='rclone sync -P drive: ~/Drive'

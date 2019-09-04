@@ -21,4 +21,3 @@ case $chosen in
         sleep 1; scrot -u
         ;;
 esac
-

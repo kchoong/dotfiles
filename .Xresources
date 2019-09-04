@@ -56,7 +56,7 @@ URxvt.lineSpace: 4
 URxvt*font: xft:Source Code Pro:size=12
 
 URxvt.perl-ext: default
-URxvt.perl-ext-common: default, clipboard
+URxvt.perl-ext-common: default,clipboard
 
 URxvt.iso14755: False
 URxvt.clipboard.autocopy: true

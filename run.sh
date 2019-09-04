@@ -7,6 +7,7 @@ rm -r .config
 cp -r ~/.config .
 cp ~/.bashrc .
 cp ~/.xinitrc .
+cp ~/.xprofile .
 cp ~/.Xresources .
 
 # remove unnecessary config

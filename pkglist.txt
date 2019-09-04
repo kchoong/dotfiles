@@ -57,6 +57,10 @@ lib32-nvidia-utils
 libtool
 licenses
 light
+light-locker
+lightdm
+lightdm-gtk-greeter
+lightdm-webkit-theme-litarvan
 linux
 linux-firmware
 linux-headers

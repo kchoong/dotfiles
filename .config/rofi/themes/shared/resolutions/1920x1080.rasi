@@ -2,8 +2,8 @@
   /* General */
   text-font:                            "SF Pro Display 14";
   text-font-mono:                       "Source Code Pro 14";
-  icon-font:                            "Ubuntu Nerd Font 60";
-  icon-font-small:                      "Ubuntu Nerd Font 24";
+  icon-font:                            "Hurmit Nerd Font Mono 60";
+  icon-font-small:                      "Hurmit Nerd Font Mono 24";
   inputbar-margin:                      4px 4px;
   prompt-padding:                       16px 20px;
   entry-padding:                        18px 16px 16px 0px;

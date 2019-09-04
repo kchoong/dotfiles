@@ -4,4 +4,3 @@ xsetroot -cursor_name left_ptr
 
 sxhkd &
 light-locker &
-exec bspwm
