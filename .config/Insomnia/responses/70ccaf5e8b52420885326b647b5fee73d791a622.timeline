@@ -1,0 +1,117 @@
+[
+	{
+		"name": "TEXT",
+		"value": "Preparing request to http://localhost:8080/api/persons/t.hanika/posts",
+		"timestamp": 1573744820241
+	},
+	{
+		"name": "TEXT",
+		"value": "Using libcurl/7.61.1 OpenSSL/1.1.0h zlib/1.2.11 nghttp2/1.29.0",
+		"timestamp": 1573744820241
+	},
+	{
+		"name": "TEXT",
+		"value": "Current time is 2019-11-14T15:20:20.241Z",
+		"timestamp": 1573744820241
+	},
+	{
+		"name": "TEXT",
+		"value": "Disable timeout",
+		"timestamp": 1573744820241
+	},
+	{
+		"name": "TEXT",
+		"value": "Enable automatic URL encoding",
+		"timestamp": 1573744820241
+	},
+	{
+		"name": "TEXT",
+		"value": "Enable SSL validation",
+		"timestamp": 1573744820241
+	},
+	{
+		"name": "TEXT",
+		"value": "Enable cookie sending with jar of 0 cookies",
+		"timestamp": 1573744820249
+	},
+	{
+		"name": "TEXT",
+		"value": "Found bundle for host localhost: 0x2d9cc4ebf930 [can pipeline]\n",
+		"timestamp": 1573744820260
+	},
+	{
+		"name": "TEXT",
+		"value": "Re-using existing connection! (#5) with host localhost\n",
+		"timestamp": 1573744820260
+	},
+	{
+		"name": "TEXT",
+		"value": "Connected to localhost (127.0.0.1) port 8080 (#5)\n",
+		"timestamp": 1573744820260
+	},
+	{
+		"name": "TEXT",
+		"value": "Server auth using Basic with user 'kch'\n",
+		"timestamp": 1573744820260
+	},
+	{
+		"name": "HEADER_OUT",
+		"value": "GET /api/persons/t.hanika/posts HTTP/1.1\r\nHost: localhost:8080\r\nAuthorization: Basic a2NoOjgwNTVlNzM1OGZjMzgyZDAxYWU1N2I4NTE2MTkxNTQz\r\nUser-Agent: insomnia/7.0.3\r\nAccept: */*\r\n\r\n",
+		"timestamp": 1573744820260
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "HTTP/1.1 200 \r\n",
+		"timestamp": 1573744820498
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Cache-Control: no-cache\r\n",
+		"timestamp": 1573744820498
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Expires: Wed, 31 Dec 1969 23:59:59 GMT\r\n",
+		"timestamp": 1573744820498
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Last-Modified: Thu, 01 Jan 1970 00:00:00 GMT\r\n",
+		"timestamp": 1573744820498
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Content-Type: text/xml;charset=UTF-8\r\n",
+		"timestamp": 1573744820498
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Content-Length: 20696\r\n",
+		"timestamp": 1573744820498
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Date: Thu, 14 Nov 2019 15:20:20 GMT\r\n",
+		"timestamp": 1573744820498
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "\r\n",
+		"timestamp": 1573744820498
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 7.8 KB chunk",
+		"timestamp": 1573744820499
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 12.4 KB chunk",
+		"timestamp": 1573744820500
+	},
+	{
+		"name": "TEXT",
+		"value": "Connection #5 to host localhost left intact\n",
+		"timestamp": 1573744820500
+	}
+]

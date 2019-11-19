@@ -1,0 +1,11 @@
+# TYPO3
+<VirtualHost typo3.azg>
+  DocumentRoot "/srv/http/typo3"
+  ServerName typo3.azg
+  DirectoryIndex index.php
+  <Directory "/srv/http/typo3">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Allow from All
+  </Directory>
+</VirtualHost>

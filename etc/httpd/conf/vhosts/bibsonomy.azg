@@ -1,0 +1,52 @@
+<VirtualHost bibsonomy.azg>
+  ServerName bibsonomy.azg
+        ServerAlias www.bibsonomy.azg
+        ServerAdmin webmaster@localhost
+
+  AllowEncodedSlashes On
+  #ErrorLog ${APACHE_LOG_DIR}/puma_error.log
+  #CustomLog ${APACHE_LOG_DIR}/puma_access.log combined
+
+  ##### puma conf
+
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} !bibsonomy\.azg$
+  RewriteRule ^(.*)$ - [F]
+
+  RewriteRule ^/login.html - [last]
+  RewriteRule ^/pmapmapma - [last]
+
+  RewriteRule ^/scrapingservice - [P,L]
+  RewriteRule ^(.*) /pmapmapma$0 [proxy]
+
+  <Location />
+    Order allow,deny
+    Allow from all
+  </Location>
+
+  #ProxyEngine on
+  ProxyBlock :25
+  ProxyRequests off
+
+  ProxyPass /scrapingservice http://scraper.bibsonomy.org/service
+  ProxyPassReverse /scrapingservice http://scraper.bibsonomy.org/service
+
+
+  ##### conf end
+
+  #ErrorDocument 401 /unauthorized/unauthorized.html
+  #ProxyEngine on
+  ProxyRequests Off
+  <Proxy *>
+    Order deny,allow
+    Allow from all
+  </Proxy>
+
+  ProxyPass        /pmapmapma http://localhost:8080 min=5 smax=20 max=250 ttl=120 retry=20 acquire=25
+  ProxyPassReverse /pmapmapma http://localhost:8080
+  ProxyPassReverse /  http://bibsonomy.azg/pmapmapma
+
+  #ProxyPass               /pmapmapma      http://localhost:8080 min=5 smax=20 max=250 ttl=120 retry=20 acquire=25
+  #ProxyPassReverse        /pmapmapma      http://localhost:8080
+  #ProxyPassReverse        /               http://bibsonomy.azg/pmapmapma
+</VirtualHost>

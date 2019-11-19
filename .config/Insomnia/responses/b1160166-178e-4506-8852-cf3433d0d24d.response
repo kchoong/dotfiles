@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bibsonomy stat="ok">
+    <posts start="0" end="1" next="http://localhost:8080/api/persons/t.hanika/posts?start=1&amp;end=2">
+        <post postingdate="2019-08-27T18:34:00.000+02:00" changedate="2019-08-27T18:34:00.000+02:00">
+            <group name="public" href="http://localhost:8080/api/groups/public"/>
+            <goldStandardPublication title="Individuality in Social Networks" bibtexKey="Borchmann2017" misc="  isbn = {978-3-319-64167-6},&#10;  doi = {10.1007/978-3-319-64167-6_2}" bibtexAbstract="We consider individuality in bi-modal social networks, a facet that has not been considered before in the mathematical analysis of social networks. We use methods from formal concept analysis to develop a natural definition for individuality, and provide experimental evidence that this yields a meaningful approach for additional insights into the nature of social networks." entrytype="inbook" address="Cham" author="Borchmann, Daniel and Hanika, Tom" booktitle="Formal Concept Analysis of Social Networks" editor="Missaoui, Rokia and Kuznetsov, Sergei O. and Obiedkov, Sergei" pages="19--40" publisher="Springer International Publishing" year="2017" url="https://doi.org/10.1007/978-3-319-64167-6_2" intrahash="2c7e6be27e1bee2ca4fc5c1fff91fdac" interhash="8b221d4ec57f02f883afc5242e49354b"/>
+        </post>
+    </posts>
+</bibsonomy>

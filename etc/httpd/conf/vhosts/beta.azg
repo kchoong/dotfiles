@@ -1,0 +1,10 @@
+<VirtualHost beta.azg>
+  DocumentRoot "/srv/http/beta"
+  ServerName beta.azg
+  DirectoryIndex index.php
+  <Directory "/srv/http/beta">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Allow from All
+  </Directory>
+</VirtualHost>

@@ -15,6 +15,9 @@ PS1="[\u@\H] \w $ "
 alias ls='ls --color=auto'
 alias ll='ls -la --color=auto'
 
+# login/lock
+alias unlock-session='sudo loginctl unlock-session'
+
 # service
 alias start='sudo systemctl start'
 alias stop='sudo systemctl stop'
@@ -25,5 +28,5 @@ alias status='systemctl status'
 alias fix-light='sudo chmod 666 /sys/class/backlight/intel_backlight/brightness'
 
 # documents
-alias sync-drive='rclone sync -P drive: ~/Drive'
+alias google-drive-sync='rclone sync -P drive: ~/google-drive'
 alias pdf='chromium --new-window --incognito'

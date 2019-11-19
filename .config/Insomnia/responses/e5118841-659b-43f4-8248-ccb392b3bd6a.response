@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bibsonomy stat="ok">
+    <users start="0" end="9">
+        <user name="admin" href="http://localhost:8080/api/users/admin">
+            <groups start="0" end="0"/>
+        </user>
+        <user name="dmir" href="http://localhost:8080/api/users/dmir">
+            <groups start="0" end="0"/>
+        </user>
+        <user name="dzo" href="http://localhost:8080/api/users/dzo">
+            <groups start="0" end="0"/>
+        </user>
+        <user name="hotho" href="http://localhost:8080/api/users/hotho">
+            <groups start="0" end="0"/>
+        </user>
+        <user name="kch" href="http://localhost:8080/api/users/kch">
+            <groups start="0" end="0"/>
+        </user>
+        <user name="rja" href="http://localhost:8080/api/users/rja">
+            <groups start="0" end="0"/>
+        </user>
+        <user name="stumme" href="http://localhost:8080/api/users/stumme">
+            <groups start="0" end="0"/>
+        </user>
+        <user name="tester01" href="http://localhost:8080/api/users/tester01">
+            <groups start="0" end="0"/>
+        </user>
+        <user name="tomhanika" href="http://localhost:8080/api/users/tomhanika">
+            <groups start="0" end="0"/>
+        </user>
+    </users>
+</bibsonomy>

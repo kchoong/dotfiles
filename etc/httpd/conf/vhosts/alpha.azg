@@ -1,0 +1,10 @@
+<VirtualHost alpha.azg>
+  DocumentRoot "/srv/http/alpha"
+  ServerName alpha.azg
+  DirectoryIndex index.php
+  <Directory "/srv/http/alpha">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Allow from All
+  </Directory>
+</VirtualHost>

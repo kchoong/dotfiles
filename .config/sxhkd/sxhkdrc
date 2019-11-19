@@ -24,7 +24,7 @@ super + t
 	bspc node -t tiled
 
 # set pseudo tiled
-super + p
+super + z
     bspc node -t pseudo_tiled
 
 # set floating window
@@ -37,7 +37,7 @@ super + f
 
 # focus or send to the given desktop
 super + {1-9,0}
-	bspc desktop -f '^{1-9,10}'
+	bspc desktop -f '^{1-9,10}';
 
 # send to the given desktop
 super + shift + {1-9,0}
@@ -116,6 +116,10 @@ super + alt + 2
 super + alt + 3
 	sh ~/.scripts/extended.sh
 
+# extending display - reverse primary
+super + alt + 4
+	sh ~/.scripts/extended-reverse.sh
+
 # duplicate display
 super + alt + 4
 	sh ~/.scripts/duplicate.sh
@@ -172,6 +176,10 @@ super + ctrl + space
 Print
 	sh ~/.config/rofi/scripts/scrotmenu.sh
 
-# power menu
+# lock session
 super + o
+	light-locker-command -l
+
+# power menu
+super + p
 	sh ~/.config/rofi/scripts/powermenu.sh

@@ -1,0 +1,11 @@
+# Localhost
+<VirtualHost localhost>
+  DocumentRoot "/srv/http/"
+  ServerName localhost
+  DirectoryIndex index.html
+  <Directory "/srv/http/">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Allow from All
+  </Directory>
+</VirtualHost>

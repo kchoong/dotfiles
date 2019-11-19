@@ -179,7 +179,7 @@ label = %percentage_used%%
 [module/time]
 type = internal/date
 interval = 5
-date =   %H:%M %p
+date =   %I:%M %p
 
 [module/date]
 type = internal/date
@@ -190,7 +190,7 @@ label = %date%
 [module/datetime]
 type = internal/date
 interval = 5
-date =  %a %d. %b, %H:%M
+date =  %a %d. %b, %I:%M
 label = %date%
 
 [module/volume]

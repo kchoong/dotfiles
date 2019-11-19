@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bibsonomy stat="ok">
+    <persons start="0" end="2" next="http://localhost:8080/api/persons?start=2&amp;end=4">
+        <person personId="a.hotho">
+            <mainName firstName="Andreas" lastName="Hotho"/>
+            <user name="hotho"/>
+        </person>
+        <person personId="m.mustermann.2">
+            <mainName firstName="Max" lastName="Mustermann"/>
+        </person>
+    </persons>
+</bibsonomy>

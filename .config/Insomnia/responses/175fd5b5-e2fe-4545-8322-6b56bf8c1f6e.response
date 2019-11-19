@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bibsonomy stat="ok">
+    <resourcePersonRelations>
+        <resourcePersonRelation>
+            <person personId="r.jaschke">
+                <mainName firstName="Robert" lastName="Jäschke"/>
+                <user name="rja"/>
+            </person>
+            <resource interHash="3eaf2beb1cdad39b7c5735a82c3338dd" intraHash="aa4b3d79a362d7415aaa77625b590dfa"/>
+            <relationType>author</relationType>
+            <personIndex>1</personIndex>
+        </resourcePersonRelation>
+    </resourcePersonRelations>
+</bibsonomy>

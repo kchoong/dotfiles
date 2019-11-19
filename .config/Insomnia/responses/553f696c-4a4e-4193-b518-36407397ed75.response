@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bibsonomy stat="fail">
+    <error>javax.xml.bind.UnmarshalException: unexpected element (uri:"", local:"xml"). Expected elements are &lt;{}bibsonomy&gt;</error>
+</bibsonomy>

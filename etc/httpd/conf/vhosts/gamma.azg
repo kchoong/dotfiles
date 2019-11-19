@@ -1,0 +1,10 @@
+<VirtualHost *>
+  DocumentRoot "/srv/http/gamma"
+  ServerName gamma.azg
+  DirectoryIndex index.php
+  <Directory "/srv/http/gamma">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Allow from All
+  </Directory>
+</VirtualHost>

@@ -1,5 +1,7 @@
 chrome-remote-desktop
+clion
 gotop
+insomnia
 intellij-idea-ultimate-edition
 mongodb-bin
 nerd-fonts-complete
