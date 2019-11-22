@@ -1,1 +1,5 @@
 __pycache__/
+*.errors
+*.error
+*.log
+*.logs
