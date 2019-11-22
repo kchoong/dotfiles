@@ -1,5 +1,6 @@
 chrome-remote-desktop
 clion
+compton
 gotop
 insomnia
 intellij-idea-ultimate-edition

@@ -178,7 +178,7 @@ Print
 
 # lock session
 super + o
-	light-locker-command -l
+	dm-tool lock
 
 # power menu
 super + p

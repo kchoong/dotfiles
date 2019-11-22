@@ -100,6 +100,7 @@ pciutils
 perl
 php
 php-apache
+php-cgi
 php-gd
 php-intl
 phpmyadmin
@@ -152,6 +153,8 @@ wpa_supplicant
 xdebug
 xf86-video-intel
 xfsprogs
+xmonad
+xmonad-contrib
 xorg-bdftopcf
 xorg-iceauth
 xorg-luit

@@ -7,8 +7,10 @@ rm -r .config
 cp -r ~/.config .
 cp ~/.bashrc .
 cp ~/.xinitrc .
-cp ~/.xprofile .
+# cp ~/.xprofile .
+cp ~/.xprofile.old .
 cp ~/.Xresources .
+cp -r ~/.xmonad .
 
 # remove unnecessary config
 rm -r .config/Atom
