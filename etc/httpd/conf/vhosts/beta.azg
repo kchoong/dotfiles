@@ -1,6 +1,7 @@
 <VirtualHost beta.azg>
-  DocumentRoot "/srv/http/beta"
   ServerName beta.azg
+  ServerAlias www.beta.azg
+  DocumentRoot "/srv/http/beta"
   DirectoryIndex index.php
   <Directory "/srv/http/beta">
     Options Indexes FollowSymLinks MultiViews

@@ -1,6 +1,7 @@
 <VirtualHost alpha.azg>
-  DocumentRoot "/srv/http/alpha"
   ServerName alpha.azg
+  ServerAlias www.alpha.azg
+  DocumentRoot "/srv/http/alpha"
   DirectoryIndex index.php
   <Directory "/srv/http/alpha">
     Options Indexes FollowSymLinks MultiViews

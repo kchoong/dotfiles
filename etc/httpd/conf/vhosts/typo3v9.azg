@@ -1,7 +1,8 @@
 # TYPO3 v9
 <VirtualHost typo3v9.azg>
-  DocumentRoot "/srv/http/typo3v9"
   ServerName typo3v9.azg
+  ServerAlias www.typo3v9.azg
+  DocumentRoot "/srv/http/typo3v9"
   DirectoryIndex index.php
   <Directory "/srv/http/typo3v9">
     Options Indexes FollowSymLinks MultiViews

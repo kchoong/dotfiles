@@ -1,7 +1,7 @@
 <VirtualHost bibsonomy.azg>
   ServerName bibsonomy.azg
-        ServerAlias www.bibsonomy.azg
-        ServerAdmin webmaster@localhost
+  ServerAlias www.bibsonomy.azg
+  ServerAdmin webmaster@localhost
 
   AllowEncodedSlashes On
   #ErrorLog ${APACHE_LOG_DIR}/puma_error.log

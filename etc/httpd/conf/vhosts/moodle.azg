@@ -1,0 +1,12 @@
+# Moodle
+<VirtualHost moodle.azg>
+  ServerName moodle.azg
+  ServerAlias www.moodle.azg
+  DocumentRoot "/srv/http/moodle"
+  DirectoryIndex index.php
+  <Directory "/srv/http/typo3">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Allow from All
+  </Directory>
+</VirtualHost>

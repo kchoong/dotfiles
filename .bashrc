@@ -30,3 +30,8 @@ alias fix-light='sudo chmod 666 /sys/class/backlight/intel_backlight/brightness'
 # documents
 alias google-drive-sync='rclone sync -P drive: ~/google-drive'
 alias pdf='chromium --new-window --incognito'
+
+# projects
+alias cd-bibsonomy='cd ~/Work/bibsonomy'
+alias cd-bibsonomy-plugins='cd ~/Work/bibsonomy-plugins'
+alias cd-anikan='cd ~/Projects/anikan'

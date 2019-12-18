@@ -1,6 +1,7 @@
-<VirtualHost *>
-  DocumentRoot "/srv/http/gamma"
+<VirtualHost gamma.azg>
   ServerName gamma.azg
+  ServerAlias www.gamma.azg
+  DocumentRoot "/srv/http/gamma"
   DirectoryIndex index.php
   <Directory "/srv/http/gamma">
     Options Indexes FollowSymLinks MultiViews

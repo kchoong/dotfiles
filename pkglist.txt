@@ -14,12 +14,12 @@ bluez-utils
 bspwm
 bumblebee
 bzip2
+cabal-install
 chrome-remote-desktop
 chromium
 clion
 cmake
 composer
-compton
 coreutils
 cryptsetup
 device-mapper
@@ -103,8 +103,12 @@ php-apache
 php-cgi
 php-gd
 php-intl
+php56
+php56-apache
+php56-gd
 phpmyadmin
 phpstorm
+picom
 pkgconf
 polybar
 procps-ng

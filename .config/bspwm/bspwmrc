@@ -18,6 +18,6 @@ bspc config urgent_border_color  \#000000
 bspc config presel_border_color  \#000000
 
 feh --bg-scale ~/Pictures/Wallpaper/mountains.jpg
-compton -b
+picom -b
 polybar --reload top &
 polybar --reload top-external &

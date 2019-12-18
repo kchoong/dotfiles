@@ -1,7 +1,8 @@
 # WordPress
 <VirtualHost wordpress.azg>
-  DocumentRoot "/srv/http/wordpress"
   ServerName wordpress.azg
+  ServerAlias www.wordpress.azg
+  DocumentRoot "/srv/http/wordpress"
   DirectoryIndex index.php
   <Directory "/srv/http/wordpress">
     Options Indexes FollowSymLinks MultiViews
