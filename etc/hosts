@@ -2,5 +2,9 @@
 # See hosts(5) for details.
 
 127.0.0.1	localhost
-::1		localhost
+::1		    localhost
 127.0.1.1	kchoong-XPS.localdomain		kchoong-XPS
+
+127.0.0.1   typo3.azg
+127.0.0.1   wordpress.azg
+127.0.0.1   bibsonomy.azg
