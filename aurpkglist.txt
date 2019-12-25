@@ -1,17 +1,4 @@
-chrome-remote-desktop
-clion
 gotop
-insomnia
-intellij-idea-ultimate-edition
-mongodb-bin
 nerd-fonts-complete
 otf-san-francisco
-php56
-php56-apache
-php56-gd
-phpstorm
-polybar
-pycharm-professional
-spotify
-webstorm
 yay

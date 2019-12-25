@@ -2,44 +2,55 @@
 
 # A script to copy all my dotfiles
 
-# config files
+# remove old folders
 rm -r .config
-cp -r ~/.config .
+rm -r .scripts
+rm -r .xmonad
+rm -r etc
+
+# recreating folders
+mkdir .config
+mkdir .xmonad
+mkdir etc
+
+# home config files
 cp ~/.bashrc .
 cp ~/.xinitrc .
-# cp ~/.xprofile .
-cp ~/.xprofile.old .
 cp ~/.Xresources .
-cp -r ~/.xmonad .
+cp -r ~/.scripts .
 
-# remove unnecessary config
-rm -r .config/Atom
-rm -r .config/chromium
-rm -r .config/configstore
-rm -r .config/dconf
-rm -r .config/discord
-rm -r .config/gtk-3.0
-rm -r .config/Insomnia
-rm -r .config/menus
-rm -r .config/procps
-rm -r .config/rclone
-rm -r .config/spotify
-rm -r .config/vlc
-rm -r .config/yay
+# config files
 
-# apache, mysql & php
-rm -r etc
-mkdir etc
-cp -r /etc/php .
-cp -r /etc/httpd .
-rm httpd/modules
-mv php etc
-mv httpd etc
+cp -r ~/.config/git .config/
+cp -r ~/.config/hg .config/
+cp -r ~/.config/picom .config/
+cp -r ~/.config/rofi .config/
+
+# xmonad
+cp ~/.xmonad/xmonad.hs .xmonad/
+cp ~/.xmobarrc .
+
+# apache
+mkdir etc/httpd
+cp -r /etc/httpd/conf etc/httpd/
+
+# php
+cp -r /etc/php etc/
+
+# mysql
+cp /etc/my.cnf etc/
+cp -r /etc/my.cnf.d etc/
+
+# hostname
+cp /etc/hostname etc/
+
+# hosts
+cp /etc/hosts etc/
+
+# xorg
+mkdir etc/X11
+cp -r /etc/X11/xorg.conf.d etc/X11/
 
 # pacman
 pacman -Qqe > pkglist.txt
 pacman -Qqem > aurpkglist.txt
-
-# scripts
-rm -r .scripts
-cp -r ~/.scripts .

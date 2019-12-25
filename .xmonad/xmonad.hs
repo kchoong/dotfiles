@@ -1,158 +1,188 @@
+-- Imports --------------------------------------------------------------------
 import XMonad
-
-import XMonad.Actions.CycleWS
-import XMonad.Actions.DynamicProjects
-
 import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
-import XMonad.Hooks.Minimize
-import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
-import XMonad.Hooks.UrgencyHook
 
-import XMonad.Util.EZConfig
-import XMonad.Util.NamedActions
 import XMonad.Util.Run
+import XMonad.Util.EZConfig
+import XMonad.Util.SpawnOnce
 
-import XMonad.Layout.FixedColumn
-import XMonad.Layout.LimitWindows
-import XMonad.Layout.Magnifier
-import XMonad.Layout.Minimize
-import XMonad.Layout.NoBorders
-import XMonad.Layout.PerWorkspace
-import XMonad.Layout.Renamed
-import XMonad.Layout.Spacing
-import XMonad.Layout.Tabbed
-import XMonad.Layout.ThreeColumns
-
-import XMonad.Prompt
-import qualified XMonad.Layout.BoringWindows as B
-
-import System.Exit
-import Graphics.X11.ExtraTypes.XF86
-
+import Data.List
 import qualified XMonad.StackSet as W
-import qualified Data.Map        as M
-import Data.Ratio ((%))
 
-import System.IO (hClose)
+import XMonad.Layout.Spacing
+import XMonad.Layout.ResizableTile
+import XMonad.Layout.WindowArranger
+import XMonad.Layout.NoBorders
+import XMonad.Layout.Fullscreen
+import XMonad.Layout.Circle
+import XMonad.Layout.Gaps
+import XMonad.Layout.Tabbed
 
-import qualified Codec.Binary.UTF8.String as UTF8
+import XMonad.Actions.CycleWS
 
--- main :: IO()
-main = do
-  xmonad
-    $ myConfig
-    `additionalKeys`
-                [ ((mod4Mask, space), spawn "rofi -show drun -theme themes/appsmenu.rasi")
-                ]
+import System.IO
 
--- CONFIG
+-- General --------------------------------------------------------------------
 
-myConfig = def
-  { terminal           = myTerminal,
-  -- focusFollowsMouse  = myFocusFollowsMouse,
-  borderWidth        = myBorderWidth,
-  modMask            = myModMask,
-  -- numlockMask deprecated in 0.9.1
-  -- numlockMask        = myNumlockMask,
-  workspaces         = myWorkspaces,
-  -- normalBorderColor  = myNormalBorderColor,
-  -- focusedBorderColor = myFocusedBorderColor,
+-- Terminal
+myTerminal              = "urxvt"
 
-  -- key bindings
-  keys               = myProgramKeys,
-  -- mouseBindings      = myMouseBindings,
+-- Modifier key
+myModMask               = mod4Mask
 
-  -- hooks, layouts
-  -- layoutHook         = myLayout,
-  -- manageHook         = myManageHook,
-  -- handleEventHook    = myEventHook,
-  -- logHook            = myLogHook,
-  startupHook        = myStartupHook
-  }
+-- Colors
+myForegroundColor       = "#ffffff"
+myBackgroundColor       = "#000000"
+myAccentColor           = "#fd1369"
 
--- General config
-myTerminal     = "urxvt"
-myModMask      = mod4Mask
-myBorderWidth  = 1
-myBrowser      = "chromium"
-mySpacing :: Int
-mySpacing      = 5
-myLargeSpacing :: Int
-myLargeSpacing = 30
-noSpacing :: Int
-noSpacing      = 0
-prompt         = 20
+-- Borders
+myBorderWidth           = 1
+myNormalBorderColor     = "#000000"
+myFocusedBorderColor    = "#fd1369"
 
--- Colours
-fg        = "#ebdbb2"
-bg        = "#282828"
-gray      = "#a89984"
-bg1       = "#3c3836"
-bg2       = "#505050"
-bg3       = "#665c54"
-bg4       = "#7c6f64"
+-- Whether focus follows the mouse pointer.
+myFocusFollowsMouse :: Bool
+myFocusFollowsMouse     = True
 
-green     = "#b8bb26"
-darkgreen = "#98971a"
-red       = "#fb4934"
-darkred   = "#cc241d"
-yellow    = "#fabd2f"
-blue      = "#83a598"
-purple    = "#d3869b"
-aqua      = "#8ec07c"
-white     = "#eeeeee"
+-- Whether clicking on a window to focus also passes the click to the window
+myClickJustFocuses :: Bool
+myClickJustFocuses      = False
 
-pur2      = "#5b51c9"
-blue2     = "#2266d0"
+-- Workspaces -----------------------------------------------------------------
 
--- Font
-myFont = "xft:SF Pro Display:" ++ "fontformat=truetype:size=10:antialias=true"
+myWorkspaces = [" 一 ", " 二 ", " 三 ", " 四 ", " 五 ", " 六 ", " 七 ", " 八 ", " 九 ", " 十 "]
 
--- LAYOUT
+-- Key bindings ---------------------------------------------------------------
+-- Add, modify or remove key bindings here.
 
--- THEMES
--- Prompt themes
+myKeys =    [ ((modm, xK_Left), prevWS)
+            , ((modm, xK_Right), nextWS)
+            , ((modm .|. controlMask              , xK_s    ), sendMessage  Arrange          )
+            , ((modm .|. controlMask .|. shiftMask, xK_s    ), sendMessage  DeArrange        )
+            , ((modm .|. controlMask              , xK_Left ), sendMessage (MoveLeft      10))
+            , ((modm .|. controlMask              , xK_Right), sendMessage (MoveRight     10))
+            , ((modm .|. controlMask              , xK_Down ), sendMessage (MoveDown      10))
+            , ((modm .|. controlMask              , xK_Up   ), sendMessage (MoveUp        10))
+            , ((modm                 .|. shiftMask, xK_Left ), sendMessage (IncreaseLeft  10))
+            , ((modm                 .|. shiftMask, xK_Right), sendMessage (IncreaseRight 10))
+            , ((modm                 .|. shiftMask, xK_Down ), sendMessage (IncreaseDown  10))
+            , ((modm                 .|. shiftMask, xK_Up   ), sendMessage (IncreaseUp    10))
+            , ((modm .|. controlMask .|. shiftMask, xK_Left ), sendMessage (DecreaseLeft  10))
+            , ((modm .|. controlMask .|. shiftMask, xK_Right), sendMessage (DecreaseRight 10))
+            , ((modm .|. controlMask .|. shiftMask, xK_Down ), sendMessage (DecreaseDown  10))
+            , ((modm .|. controlMask .|. shiftMask, xK_Up   ), sendMessage (DecreaseUp    10))
+            , ((modm, xK_KP_Add), sequence_ [ sendMessage (IncreaseLeft 10)
+                        , sendMessage (IncreaseRight 10)
+                        , sendMessage (IncreaseUp 10)
+                        , sendMessage (IncreaseDown 10)
+                        ])
+            , ((modm, xK_KP_Subtract), sequence_ [ sendMessage (DecreaseLeft 10)
+                             , sendMessage (DecreaseRight 10)
+                             , sendMessage (DecreaseUp 10)
+                             , sendMessage (DecreaseDown 10)
+                             ])
+        -- programs
+        -- rofi, power, lock
+            , ((modm, xK_p), spawn $ "rofi -show drun -theme themes/appsmenu.rasi")
+            , ((modm .|. controlMask, xK_p), spawn $ "rofi -show combi -theme themes/appsmenu.rasi")
+            , ((modm, xK_o), spawn $ "xtrlock")
+            , ((modm .|. controlMask, xK_o), spawn $ "sh ~/.config/rofi/scripts/powermenu.sh")
+            ] where modm = myModMask
 
+-- Layouts --------------------------------------------------------------------
 
--- WORKSPACES
-wsGEN = "\xf269"
-wsWRK = "\xf02d"
-wsSYS = "\xf300"
-wsMED = "\xf001"
-wsTMP = "\xf2db"
-wsGAM = "\xf11b"
+myLayout = gaps [(U, 35), (R, 5), (L, 5), (D, 5)] $ smartSpacing 5 $ (tiled ||| Circle ||| Full)
+  where
+     -- default tiling algorithm partitions the screen into two panes
+     tiled   = Tall nmaster delta ratio
 
-myWorkspaces :: [String]
-myWorkspaces = [wsGEN, wsWRK, wsSYS, wsMED, wsTMP, wsGAM, "7", "8", "9"]
+     -- The default number of windows in the master pane
+     nmaster = 1
 
--- KEYBINDINGS
-showKeybindings :: [((KeyMask, KeySym), NamedAction)] -> NamedAction
-showKeybindings x = addName "Show Keybindings" $ io $ do
-  h <- spawnPipe "zenity --text-info --font=adobe courier"
-  hPutStr h (unlines $ showKm x)
-  hClose h
-  return ()
+     -- Default proportion of screen occupied by master pane
+     ratio   = 1/2
 
-myAdditionalKeys c = (subtitle "Custom Keys":) $ mkNamedKeymap c $
-  myProgramKeys ++ myWindowManagerKeys ++ myMediaKeys
+     -- Percent of screen to increment by when resizing panes
+     delta   = 3/100
 
-myProgramKeys =
-  [ ("M-space"        , addName "Rofi menu" $ spawn "rofi -show drun -theme themes/appsmenu.rasi")
-  ]
+-- Window rules ---------------------------------------------------------------
 
-myWindowManagerKeys =
-  []
+myManageHook = composeAll
+    []
+    <+> (isFullscreen --> doFullFloat)
+    <+> manageDocks
+    <+> manageHook def
 
-myMediaKeys =
-  []
+-- Event handling hook --------------------------------------------------------
 
--- STARTUPHOOK
+myEventHook = mempty
+
+-- Status bars and logging hook -----------------------------------------------
+
+myLogHook h = dynamicLogWithPP $ defaultPP
+
+    -- display current workspace as darkgrey on light grey (opposite of
+    -- default colors)
+    { ppCurrent         = xmobarColor (myForegroundColor) (myAccentColor) . pad
+
+    -- display other workspaces which contain windows as a brighter grey
+    , ppHidden          = xmobarColor (myForegroundColor) (myBackgroundColor) . pad
+
+    -- display other workspaces with no windows as a normal grey
+    -- , ppHiddenNoWindows = xmobarColor (myForegroundColor) (myBackgroundColor) . pad
+
+    -- display the current layout as a brighter grey
+    , ppLayout          = xmobarColor (myForegroundColor) (myAccentColor) . pad
+
+    -- if a window on a hidden workspace needs my attention, color it so
+    , ppUrgent          = xmobarColor (myForegroundColor) (myAccentColor) . pad
+
+    -- shorten if it goes over 100 characters
+    , ppTitle           = shorten 100
+
+    --
+    , ppOrder           = \(ws:l:t:_) -> [ws,l]
+
+    -- no separator between workspaces
+    , ppWsSep           = ""
+
+    -- put a few spaces between each object
+    , ppSep             = "    ::    "
+
+    -- output to the handle we were given as an argument
+    , ppOutput          = hPutStrLn h
+    }
+
+-- Startup hook ---------------------------------------------------------------
+-- By default, do nothing.
+myStartupHook :: X()
 myStartupHook = do
-  setWMName "LG3D"
-  spawn "feh -bg-scale ~/Pictures/Wallpaper/mountains.jpg"
-  spawn "picom -b"
-  spawn "polybar --reload top"
+    setWMName "xmonad"
+
+------------------------------------------------------------------------
+-- Now run xmonad with all the defaults we set up.
+-- Run xmonad with the settings you specify. No need to modify this.
+
+main = do
+    bar <- spawnPipe "xmobar ~/.xmobarrc"
+    xmonad $ def {
+          -- simple stuff
+            terminal           = myTerminal,
+            focusFollowsMouse  = myFocusFollowsMouse,
+            clickJustFocuses   = myClickJustFocuses,
+            borderWidth        = myBorderWidth,
+            modMask            = myModMask,
+            workspaces         = myWorkspaces,
+            normalBorderColor  = myNormalBorderColor,
+            focusedBorderColor = myFocusedBorderColor,
+
+          -- hooks, layouts
+            layoutHook         = myLayout,
+            manageHook         = myManageHook,
+            handleEventHook    = myEventHook,
+            logHook            = myLogHook bar,
+            startupHook        = myStartupHook
+        } `additionalKeys` myKeys
