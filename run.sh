@@ -4,6 +4,7 @@
 
 # remove old folders
 rm -r .config
+rm -r .screenlayout
 rm -r .scripts
 rm -r .xmonad
 rm -r etc
@@ -17,10 +18,11 @@ mkdir etc
 cp ~/.bashrc .
 cp ~/.xinitrc .
 cp ~/.Xresources .
+cp -r ~/.screenlayout .
 cp -r ~/.scripts .
 
 # config files
-
+cp -r ~/.config/dunst .config/
 cp -r ~/.config/git .config/
 cp -r ~/.config/hg .config/
 cp -r ~/.config/picom .config/

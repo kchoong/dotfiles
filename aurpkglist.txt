@@ -1,4 +1,9 @@
+clion
 gotop
+intellij-idea-ultimate-edition
 nerd-fonts-complete
 otf-san-francisco
+phpstorm
+pycharm-professional
+webstorm
 yay

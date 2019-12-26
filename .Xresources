@@ -51,14 +51,16 @@ Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
 
 URxvt.scrollBar: false
-URxvt.internalBorder:  5
+URxvt.internalBorder: 5
 URxvt.lineSpace: 4
-URxvt*font: xft:Source Code Pro:size=12, xft:Ubuntu Nerd Font:style=Regular:size=12
+URxvt*font: xft:Source Code Pro:size=12, xft:Ubuntu Nerd Font:size=12
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 
 URxvt.perl-ext: default
 URxvt.perl-ext-common: default,clipboard
 
-URxvt.iso14755: False
 URxvt.clipboard.autocopy: true
 URxvt.keysym.Control-C: perl:clipboard:copy
 URxvt.keysym.Control-V: perl:clipboard:paste

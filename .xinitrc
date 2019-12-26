@@ -38,6 +38,9 @@ setxkbmap de
 # set cursor
 xsetroot -cursor_name left_ptr
 
+# set screenlayout
+~/.scripts/auto-screenlayout.sh
+
 # set desktop background
 feh --bg-scale ~/Pictures/backgrounds/mountains.jpg
 

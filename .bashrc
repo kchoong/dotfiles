@@ -20,3 +20,6 @@ alias start='sudo systemctl start'
 alias stop='sudo systemctl stop'
 alias restart='sudo systemctl restart'
 alias status='systemctl status'
+
+# utils
+alias auto-screenlayout='~/.scripts/auto-screenlayout.sh'
