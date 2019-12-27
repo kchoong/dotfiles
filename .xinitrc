@@ -42,7 +42,7 @@ xsetroot -cursor_name left_ptr
 ~/.scripts/auto-screenlayout.sh
 
 # set desktop background
-feh --bg-scale ~/Pictures/backgrounds/mountains.jpg
+feh --bg-scale ~/Pictures/Backgrounds/mountains.jpg
 
 # start picom
 picom -b
