@@ -1,0 +1,17 @@
+Description='eduroam'
+Interface=wlp2s0
+Connection=wireless
+Security=wpa-configsection
+IP=dhcp
+ESSID='eduroam'
+WPAConfigSection=(
+    'ssid="eduroam"'
+    'key_mgmt=WPA-EAP'
+    'eap=PEAP'
+    'proto=WPA RSN'
+    'identity="${identity}"'
+    'anonymous_identity="${anon-identity}"'
+    'password="${password}"'
+    'ca_cert="${cert-path}"'
+    'phase2="auth=MSCHAPV2"'
+)

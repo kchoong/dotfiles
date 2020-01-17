@@ -1,6 +1,6 @@
-<VirtualHost anikan.azg>
-  ServerName anikan.azg
-  ServerAlias www.anikan.azg
+<VirtualHost xiv-azalea.azg>
+  ServerName xiv-azalea.azg
+  ServerAlias www.xiv-azalea.azg
   ServerAdmin webmaster@localhost
 
   ProxyRequests On

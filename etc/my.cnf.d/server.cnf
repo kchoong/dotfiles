@@ -10,6 +10,7 @@
 
 # this is only for the mysqld standalone daemon
 [mysqld]
+sql-mode="STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
 
 #
 # * Galera-related settings
@@ -43,4 +44,3 @@
 # If you use the same .cnf file for MariaDB of different versions,
 # use this group for options that older servers don't understand
 [mariadb-10.4]
-

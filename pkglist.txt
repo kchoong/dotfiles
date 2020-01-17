@@ -50,6 +50,7 @@ man-db
 man-pages
 mariadb
 maven
+mercurial
 nano
 neofetch
 nerd-fonts-complete
@@ -82,6 +83,7 @@ rofi
 rxvt-unicode
 sed
 spectacle
+spotify
 subversion
 sudo
 texinfo

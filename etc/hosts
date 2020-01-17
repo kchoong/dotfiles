@@ -5,6 +5,13 @@
 ::1		    localhost
 127.0.1.1	kchoong-XPS.localdomain		kchoong-XPS
 
+# Projects
+
+127.0.0.1   anikan.azg
+127.0.0.1   xiv-azalea.azg
+
+# Work
+
 127.0.0.1   typo3.azg
 127.0.0.1   wordpress.azg
 127.0.0.1   bibsonomy.azg
