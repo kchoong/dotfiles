@@ -23,3 +23,4 @@ alias status='systemctl status'
 
 # utils
 alias auto-screenlayout='~/.scripts/auto-screenlayout.sh'
+alias activate='source env/bin/activate'

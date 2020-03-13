@@ -79,6 +79,7 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 pulsemixer
 pycharm-professional
+python-pip
 rofi
 rxvt-unicode
 sed

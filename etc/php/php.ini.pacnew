@@ -363,7 +363,7 @@ zend.enable_gc = On
 
 ; Allows to include or exclude arguments from stack traces generated for exceptions
 ; Default: Off
-; In production, it is recommended to turn this setting on to prohibit the output
+; In production, it is recommended to turn this setting on to prohibit the output 
 ; of sensitive information in stack traces
 zend.exception_ignore_args = On
 
@@ -385,7 +385,7 @@ expose_php = On
 ; Maximum execution time of each script, in seconds
 ; http://php.net/max-execution-time
 ; Note: This directive is hardcoded to 0 for the CLI SAPI
-max_execution_time = 240
+max_execution_time = 30
 
 ; Maximum amount of time each script may spend parsing request data. It's a good
 ; idea to limit this time on productions servers in order to eliminate unexpectedly
@@ -402,7 +402,7 @@ max_input_time = 60
 ;max_input_nesting_level = 64
 
 ; How many GET/POST/COOKIE input variables may be accepted
-max_input_vars = 1500
+;max_input_vars = 1000
 
 ; Maximum amount of memory a script may consume (128MB)
 ; http://php.net/memory-limit
@@ -691,7 +691,7 @@ auto_globals_jit = On
 ; Its value may be 0 to disable the limit. It is ignored if POST data reading
 ; is disabled through enable_post_data_reading.
 ; http://php.net/post-max-size
-post_max_size = 20M
+post_max_size = 8M
 
 ; Automatically add files before PHP document.
 ; http://php.net/auto-prepend-file
@@ -843,7 +843,7 @@ file_uploads = On
 
 ; Maximum allowed size for uploaded files.
 ; http://php.net/upload-max-filesize
-upload_max_filesize = 20M
+upload_max_filesize = 2M
 
 ; Maximum number of files that can be uploaded via a single request
 max_file_uploads = 20
@@ -905,22 +905,22 @@ default_socket_timeout = 60
 ; move to the new ('extension=<ext>) syntax.
 ;
 ;extension=bcmath
-extension=bz2
+;extension=bz2
 ;extension=calendar
 extension=curl
 ;extension=dba
 ;extension=enchant
 ;extension=exif
 ;extension=ffi
-extension=ftp
-extension=gd
+;extension=ftp
+;extension=gd
 ;extension=gettext
 ;extension=gmp
-extension=iconv
+;extension=iconv
 ;extension=imap
-extension=intl
+;extension=intl
 ;extension=ldap
-extension=mysqli
+;extension=mysqli
 ;extension=odbc
 ;zend_extension=opcache
 ;extension=pdo_dblib
@@ -1394,12 +1394,9 @@ session.cookie_samesite =
 ; http://php.net/session.serialize-handler
 session.serialize_handler = php
 
-; Defines the probability that the 'garbage collection' process is started
-; on every session initialization. The probability is calculated by using
-; gc_probability/gc_divisor. Where session.gc_probability is the numerator
-; and gc_divisor is the denominator in the equation. Setting this value to 1
-; when the session.gc_divisor value is 100 will give you approximately a 1% chance
-; the gc will run on any given request.
+; Defines the probability that the 'garbage collection' process is started on every
+; session initialization. The probability is calculated by using gc_probability/gc_divisor,
+; e.g. 1/100 means there is a 1% chance that the GC process starts on each request.
 ; Default Value: 1
 ; Development Value: 1
 ; Production Value: 1
@@ -1407,13 +1404,9 @@ session.serialize_handler = php
 session.gc_probability = 1
 
 ; Defines the probability that the 'garbage collection' process is started on every
-; session initialization. The probability is calculated by using the following equation:
-; gc_probability/gc_divisor. Where session.gc_probability is the numerator and
-; session.gc_divisor is the denominator in the equation. Setting this value to 100
-; when the session.gc_probability value is 1 will give you approximately a 1% chance
-; the gc will run on any given request. Increasing this value to 1000 will give you
-; a 0.1% chance the gc will run on any given request. For high volume production servers,
-; this is a more efficient approach.
+; session initialization. The probability is calculated by using gc_probability/gc_divisor,
+; e.g. 1/100 means there is a 1% chance that the GC process starts on each request.
+; For high volume production servers, using a value of 1000 is a more efficient approach.
 ; Default Value: 100
 ; Development Value: 1000
 ; Production Value: 1000
@@ -1939,7 +1932,7 @@ ldap.max_links = -1
 ;openssl.capath=
 
 [ffi]
-; FFI API restriction. Possibe values:
+; FFI API restriction. Possible values:
 ; "preload" - enabled in CLI scripts and preloaded files (default)
 ; "false"   - always disabled
 ; "true"    - always enabled

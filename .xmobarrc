@@ -12,7 +12,7 @@ Config {
     -- layout
     , sepChar           = "%"
     , alignSep          = "}{"
-    , template          = "%StdinReader% }{ %dynnetwork% | %battery% | %date%"
+    , template          = "%StdinReader% }{%dynnetwork% %battery% | %date%"
 
     -- general behavior
     , lowerOnStart      = True    -- send to bottom of window stack on start
@@ -25,7 +25,7 @@ Config {
     -- plugins
     , commands =
         -- network activity monitor (dynamic interface resolution)
-        [ Run DynNetwork     [ "--template" , "<tx> kB/s <rx> kB/s"
+        [ Run DynNetwork     [ "--template" , "<tx> kB/s <rx> kB/s |"
                              , "--Low"      , "1000"       -- units: B/s
                              , "--High"     , "5000"       -- units: B/s
                              ] 10
@@ -72,6 +72,9 @@ Config {
 
         -- StdinReader
         , Run StdinReader
+
+        -- MPD integration
+        , Run MPD ["-t", "<state>: <artist> - <track> |"] 10
         ]
 
 }
