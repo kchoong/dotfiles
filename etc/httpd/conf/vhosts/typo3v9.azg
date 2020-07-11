@@ -1,0 +1,12 @@
+# TYPO3
+<VirtualHost typo3v9.azg>
+  ServerName typo3v9.azg
+  ServerAlias www.typo3v9.azg
+  DocumentRoot "/srv/http/typo3v9"
+  DirectoryIndex index.php
+  <Directory "/srv/http/typo3v9">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Allow from All
+  </Directory>
+</VirtualHost>

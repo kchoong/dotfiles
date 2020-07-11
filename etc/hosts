@@ -1,17 +1,20 @@
 # Static table lookup for hostnames.
 # See hosts(5) for details.
 
-127.0.0.1	localhost
-::1		    localhost
-127.0.1.1	kchoong-XPS.localdomain		kchoong-XPS
+127.0.0.1     localhost
+::1           localhost
+127.0.1.1	    kchoong-XPS.localdomain		kchoong-XPS
 
 # Projects
 
-127.0.0.1   anikan.azg
-127.0.0.1   xiv-azalea.azg
+127.0.0.1     anikan.azg
+127.0.0.1     xiv-azalea.azg
 
 # Work
 
-127.0.0.1   typo3.azg
-127.0.0.1   wordpress.azg
-127.0.0.1   bibsonomy.azg
+127.0.0.1     bibsonomy.azg
+127.0.0.1     typo3.azg
+127.0.0.1     typo3v8.azg
+127.0.0.1     typo3v9.azg
+127.0.0.1     typo3v10.azg
+127.0.0.1     wordpress.azg

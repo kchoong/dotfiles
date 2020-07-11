@@ -30,7 +30,8 @@ cp -r ~/.config/rofi .config/
 
 # xmonad
 cp ~/.xmonad/xmonad.hs .xmonad/
-cp ~/.xmobarrc .
+cp ~/.xmonad/.xmobarrc .xmonad/
+cp ~/.xmonad/.extmobarrc .xmonad/
 
 # apache
 mkdir etc/httpd

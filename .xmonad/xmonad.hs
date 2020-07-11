@@ -52,7 +52,7 @@ import XMonad.Util.SpawnOnce
 myTerminal              = "urxvt"
 
 -- Bar
-myBar                   = "xmobar ~/.xmobarrc"
+myBar                   = "xmobar ~/.xmonad/.xmobarrc"
 
 -- Screen locker
 myLocker                = "xtrlock"
@@ -220,6 +220,14 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|. shiftMask, xK_Up), shiftPrevScreen)
     , ((modMask, xK_z), toggleWS)]
 
+    ++
+
+    -- Screenlayouts
+    [ ((modMask .|. controlMask, xK_1),  spawn $ "sh ~/.screenlayout/primary.sh")
+    , ((modMask .|. controlMask, xK_2),  spawn $ "sh ~/.screenlayout/mod-extended.sh")
+    , ((modMask .|. controlMask, xK_3),  spawn $ "sh ~/.screenlayout/duplicated.sh")
+    ]
+
 -- Layouts --------------------------------------------------------------------
 
 -- Basic tiled layout
@@ -297,14 +305,13 @@ myLogHook h = dynamicLogWithPP $ defaultPP
 
 myStartupHook :: X()
 myStartupHook = do
-    rects <- xdisplays
     setWMName "LG3D"
 
 -- Main -----------------------------------------------------------------------
 
 main :: IO ()
 main = do
-    bar <- spawnPipe $ myBar ++ " -x" ++ show 0
+    bar <- spawnPipe $ myBar
     xmonad $ defaults {
         logHook = myLogHook bar
     }

@@ -1,4 +1,3 @@
-adobe-source-code-pro-fonts
 apache
 arandr
 atom
@@ -19,8 +18,8 @@ dialog
 discord
 dolphin
 dunst
-dzen2
 efibootmgr
+elasticsearch
 fakeroot
 feh
 file
@@ -37,9 +36,9 @@ groff
 grub
 gzip
 intellij-idea-ultimate-edition
+jdk11-openjdk
 jdk8-openjdk
 lib32-nvidia-utils
-libnotify
 libtool
 linux
 linux-firmware
@@ -65,7 +64,6 @@ otf-san-francisco
 pacman
 papirus-icon-theme
 patch
-phonon-qt5-vlc
 php
 php-apache
 php-gd
@@ -83,8 +81,6 @@ python-pip
 rofi
 rxvt-unicode
 sed
-spectacle
-spotify
 subversion
 sudo
 texinfo
@@ -94,7 +90,6 @@ ufw
 unrar
 unzip
 urxvt-perls
-vlc
 webstorm
 wget
 which
@@ -130,7 +125,6 @@ xorg-xkbutils
 xorg-xkill
 xorg-xlsatoms
 xorg-xlsclients
-xorg-xmessage
 xorg-xmodmap
 xorg-xpr
 xorg-xprop
